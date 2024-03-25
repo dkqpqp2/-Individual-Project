@@ -49,6 +49,12 @@
     <ClInclude Include="..\..\Source\Individual_Project\Character\IP_CharacterBase.h">
       <Filter>Source\Individual_Project\Character</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\Character\IP_CharacterControlData.cpp">
+      <Filter>Source\Individual_Project\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Character\IP_CharacterControlData.h">
+      <Filter>Source\Individual_Project\Character</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Individual_Project\Character\IP_CharacterPlayer.cpp">
       <Filter>Source\Individual_Project\Character</Filter>
     </ClCompile>

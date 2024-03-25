@@ -12,7 +12,6 @@ void EmptyLinkFunctionForGeneratedCodeIP_CharacterPlayer() {}
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
-	ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
 	INDIVIDUAL_PROJECT_API UClass* Z_Construct_UClass_AIP_CharacterBase();
 	INDIVIDUAL_PROJECT_API UClass* Z_Construct_UClass_AIP_CharacterPlayer();
 	INDIVIDUAL_PROJECT_API UClass* Z_Construct_UClass_AIP_CharacterPlayer_NoRegister();
@@ -41,17 +40,21 @@ void EmptyLinkFunctionForGeneratedCodeIP_CharacterPlayer() {}
 #endif
 		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_FollowCamera;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_DefaultMappingContext_MetaData[];
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ChangeControlAction_MetaData[];
 #endif
-		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_DefaultMappingContext;
+		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_ChangeControlAction;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_MoveAction_MetaData[];
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ShoulderMoveAction_MetaData[];
 #endif
-		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_MoveAction;
+		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_ShoulderMoveAction;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_LookAction_MetaData[];
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ShoulderLookAction_MetaData[];
 #endif
-		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_LookAction;
+		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_ShoulderLookAction;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_QuaterMoveAction_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_QuaterMoveAction;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_JumpAction_MetaData[];
 #endif
@@ -94,29 +97,37 @@ void EmptyLinkFunctionForGeneratedCodeIP_CharacterPlayer() {}
 #endif
 	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_FollowCamera = { "FollowCamera", nullptr, (EPropertyFlags)0x00240800000a001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AIP_CharacterPlayer, FollowCamera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_FollowCamera_MetaData), Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_FollowCamera_MetaData) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_DefaultMappingContext_MetaData[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_ChangeControlAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "Character/IP_CharacterPlayer.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_DefaultMappingContext = { "DefaultMappingContext", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AIP_CharacterPlayer, DefaultMappingContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_DefaultMappingContext_MetaData), Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_DefaultMappingContext_MetaData) };
+	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_ChangeControlAction = { "ChangeControlAction", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AIP_CharacterPlayer, ChangeControlAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_ChangeControlAction_MetaData), Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_ChangeControlAction_MetaData) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_MoveAction_MetaData[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_ShoulderMoveAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "Character/IP_CharacterPlayer.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_MoveAction = { "MoveAction", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AIP_CharacterPlayer, MoveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_MoveAction_MetaData), Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_MoveAction_MetaData) };
+	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_ShoulderMoveAction = { "ShoulderMoveAction", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AIP_CharacterPlayer, ShoulderMoveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_ShoulderMoveAction_MetaData), Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_ShoulderMoveAction_MetaData) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_LookAction_MetaData[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_ShoulderLookAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "Character/IP_CharacterPlayer.h" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_LookAction = { "LookAction", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AIP_CharacterPlayer, LookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_LookAction_MetaData), Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_LookAction_MetaData) };
+	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_ShoulderLookAction = { "ShoulderLookAction", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AIP_CharacterPlayer, ShoulderLookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_ShoulderLookAction_MetaData), Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_ShoulderLookAction_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_QuaterMoveAction_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "Character/IP_CharacterPlayer.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_QuaterMoveAction = { "QuaterMoveAction", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AIP_CharacterPlayer, QuaterMoveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_QuaterMoveAction_MetaData), Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_QuaterMoveAction_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_JumpAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -128,9 +139,10 @@ void EmptyLinkFunctionForGeneratedCodeIP_CharacterPlayer() {}
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AIP_CharacterPlayer_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_CameraBoom,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_FollowCamera,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_DefaultMappingContext,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_MoveAction,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_LookAction,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_ChangeControlAction,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_ShoulderMoveAction,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_ShoulderLookAction,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_QuaterMoveAction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_JumpAction,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AIP_CharacterPlayer_Statics::StaticCppClassTypeInfo = {
@@ -171,9 +183,9 @@ void EmptyLinkFunctionForGeneratedCodeIP_CharacterPlayer() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Character_IP_CharacterPlayer_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AIP_CharacterPlayer, AIP_CharacterPlayer::StaticClass, TEXT("AIP_CharacterPlayer"), &Z_Registration_Info_UClass_AIP_CharacterPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AIP_CharacterPlayer), 799865838U) },
+		{ Z_Construct_UClass_AIP_CharacterPlayer, AIP_CharacterPlayer::StaticClass, TEXT("AIP_CharacterPlayer"), &Z_Registration_Info_UClass_AIP_CharacterPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AIP_CharacterPlayer), 644631991U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Character_IP_CharacterPlayer_h_3803672331(TEXT("/Script/Individual_Project"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Character_IP_CharacterPlayer_h_4239628111(TEXT("/Script/Individual_Project"),
 		Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Character_IP_CharacterPlayer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Character_IP_CharacterPlayer_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

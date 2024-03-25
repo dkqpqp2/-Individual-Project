@@ -4,6 +4,7 @@
 #include "IP_CharacterBase.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "IP_CharacterControlData.h"
 
 
 // Sets default values
@@ -40,6 +41,26 @@ AIP_CharacterBase::AIP_CharacterBase()
 	{
 		GetMesh()->SetAnimInstanceClass(AnimInstanceClassRef.Class);
 	}
-	
+
+	static ConstructorHelpers::FObjectFinder<UIP_CharacterControlData> ShoulderRef(TEXT("/Script/Individual_Project.IP_CharacterControlData'/Game/ArenaBattle/CharacterControl/IP_Shoulder.IP_Shoulder'"));
+	if (ShoulderRef.Object)
+	{
+		CharacterControlManager.Add(ECharacterControlType::Shoulder, ShoulderRef.Object);
+	}
+
+	static ConstructorHelpers::FObjectFinder<UIP_CharacterControlData> QuaterRef(TEXT("/Script/Individual_Project.IP_CharacterControlData'/Game/ArenaBattle/CharacterControl/IP_Quater.IP_Quater'"));
+	if (ShoulderRef.Object)
+	{
+		CharacterControlManager.Add(ECharacterControlType::Quater, QuaterRef.Object);
+	}
+}
+
+void AIP_CharacterBase::SetCharacterControlData(const UIP_CharacterControlData* CharacterControlData)
+{
+	bUseControllerRotationYaw = CharacterControlData->bUseControllerRotationYaw;
+
+	GetCharacterMovement()->bOrientRotationToMovement = CharacterControlData->bOrientRotationToMovement;
+	GetCharacterMovement()->bUseControllerDesiredRotation = CharacterControlData->bUseControllerDesiredRotation;
+	GetCharacterMovement()->RotationRate = CharacterControlData->RotationRate;
 }
 
