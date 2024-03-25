@@ -74,7 +74,7 @@ Plugins/*/Intermediate/*
 DerivedDataCache/*
 
 
-DerivedDataCache/*
-Intermediate/*
-Saved/*
-Build/*
+Individual_Project/DerivedDataCache/*
+Individual_Project/Intermediate/*
+Individual_Project/Saved/*
+Individual_Project/Build/*
