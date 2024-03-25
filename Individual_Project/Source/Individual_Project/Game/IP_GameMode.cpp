@@ -6,10 +6,10 @@
 
 AIP_GameMode::AIP_GameMode()
 {
-	static ConstructorHelpers::FClassFinder<APawn> ThirdPersonClassRef(TEXT("/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter_C"));
-	if (ThirdPersonClassRef.Class)
+	static ConstructorHelpers::FClassFinder<APawn> DefaultPawnClassRef(TEXT("/Script/Individual_Project.IP_CharacterPlayer"));
+	if (DefaultPawnClassRef.Class)
 	{
-		DefaultPawnClass = ThirdPersonClassRef.Class;
+		DefaultPawnClass = DefaultPawnClassRef.Class;
 	}
 
 	static ConstructorHelpers::FClassFinder<AIP_PlayerController> PlayerControllerRef(TEXT("/Script/Individual_Project.IP_PlayerController"));

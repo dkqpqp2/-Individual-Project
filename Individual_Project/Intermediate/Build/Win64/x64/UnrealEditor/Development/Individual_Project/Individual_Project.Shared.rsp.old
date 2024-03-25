@@ -257,6 +257,7 @@
 /I "..\Intermediate\Build\Win64\UnrealEditor\Inc\WidgetRegistration\UHT"
 /I "Developer\WidgetRegistration\Public"
 /I "D:\Individual-Project\Individual_Project\Intermediate\Build\Win64\UnrealEditor\Inc\Individual_Project\UHT"
+/I "D:\Individual-Project\Individual_Project\Source\Individual_Project"
 /I "D:\Individual-Project\Individual_Project\Source"
 /external:W0
 /external:I "ThirdParty\mimalloc\include"

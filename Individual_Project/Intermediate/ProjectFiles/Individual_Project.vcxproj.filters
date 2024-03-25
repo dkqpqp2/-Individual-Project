@@ -11,6 +11,7 @@
     <None Include="..\..\Source\Individual_ProjectEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitignore" />
     <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
@@ -71,6 +72,15 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\Individual_Project\Player\IP_PlayerController.h">
       <Filter>Source\Individual_Project\Player</Filter>
+    </ClInclude>
+    <Filter Include="Source\Individual_Project\Prop">
+      <UniqueIdentifier>{9F5721C3-7552-3CBB-AD71-E857B292E68C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Individual_Project\Prop\IP_Fountain.cpp">
+      <Filter>Source\Individual_Project\Prop</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Prop\IP_Fountain.h">
+      <Filter>Source\Individual_Project\Prop</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

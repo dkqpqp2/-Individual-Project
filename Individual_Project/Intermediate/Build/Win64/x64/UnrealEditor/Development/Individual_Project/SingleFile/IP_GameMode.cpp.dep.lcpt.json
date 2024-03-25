@@ -634,7 +634,9 @@
             "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\worldpartitionstreamingsource.generated.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\playercontroller.generated.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
-            "d:\\individual-project\\individual_project\\intermediate\\build\\win64\\unrealeditor\\inc\\individual_project\\uht\\ip_gamemode.generated.h"
+            "d:\\individual-project\\individual_project\\intermediate\\build\\win64\\unrealeditor\\inc\\individual_project\\uht\\ip_gamemode.generated.h",
+            "d:\\individual-project\\individual_project\\source\\individual_project\\player\\ip_playercontroller.h",
+            "d:\\individual-project\\individual_project\\intermediate\\build\\win64\\unrealeditor\\inc\\individual_project\\uht\\ip_playercontroller.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

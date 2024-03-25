@@ -10,7 +10,12 @@ public class Individual_Project : ModuleRules
 
 		PublicIncludePaths.AddRange(new string[] { "Individual_Project " });
 
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject"
+			, "Engine"
+			, "InputCore"
+			, "EnhancedInput"
+		
+		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
