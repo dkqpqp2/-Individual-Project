@@ -11,6 +11,7 @@
     <None Include="..\..\Source\Individual_ProjectEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -37,6 +38,39 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\Individual_Project\Individual_Project.h">
       <Filter>Source\Individual_Project</Filter>
+    </ClInclude>
+    <Filter Include="Source\Individual_Project\Character">
+      <UniqueIdentifier>{53241DDC-155A-35BA-987C-6006D5223C75}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Individual_Project\Character\IP_CharacterBase.cpp">
+      <Filter>Source\Individual_Project\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Character\IP_CharacterBase.h">
+      <Filter>Source\Individual_Project\Character</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\Character\IP_CharacterPlayer.cpp">
+      <Filter>Source\Individual_Project\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Character\IP_CharacterPlayer.h">
+      <Filter>Source\Individual_Project\Character</Filter>
+    </ClInclude>
+    <Filter Include="Source\Individual_Project\Game">
+      <UniqueIdentifier>{C86C97B2-FA96-332B-ACE9-4B19F2DFB1AB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Individual_Project\Game\IP_GameMode.cpp">
+      <Filter>Source\Individual_Project\Game</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Game\IP_GameMode.h">
+      <Filter>Source\Individual_Project\Game</Filter>
+    </ClInclude>
+    <Filter Include="Source\Individual_Project\Player">
+      <UniqueIdentifier>{2AD24472-2FF6-3B26-B307-443F4942FEFF}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Individual_Project\Player\IP_PlayerController.cpp">
+      <Filter>Source\Individual_Project\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Player\IP_PlayerController.h">
+      <Filter>Source\Individual_Project\Player</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
