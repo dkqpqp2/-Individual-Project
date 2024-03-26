@@ -40,6 +40,15 @@
     <ClInclude Include="..\..\Source\Individual_Project\Individual_Project.h">
       <Filter>Source\Individual_Project</Filter>
     </ClInclude>
+    <Filter Include="Source\Individual_Project\Animation">
+      <UniqueIdentifier>{9BC42ED3-A1C3-3F85-9025-E1B8F46F7D4B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Individual_Project\Animation\IP_AnimInstance.cpp">
+      <Filter>Source\Individual_Project\Animation</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Animation\IP_AnimInstance.h">
+      <Filter>Source\Individual_Project\Animation</Filter>
+    </ClInclude>
     <Filter Include="Source\Individual_Project\Character">
       <UniqueIdentifier>{53241DDC-155A-35BA-987C-6006D5223C75}</UniqueIdentifier>
     </Filter>
