@@ -43,6 +43,12 @@
     <Filter Include="Source\Individual_Project\Animation">
       <UniqueIdentifier>{9BC42ED3-A1C3-3F85-9025-E1B8F46F7D4B}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Individual_Project\Animation\AnimNotify_AttackHitCheck.cpp">
+      <Filter>Source\Individual_Project\Animation</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Animation\AnimNotify_AttackHitCheck.h">
+      <Filter>Source\Individual_Project\Animation</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Individual_Project\Animation\IP_AnimInstance.cpp">
       <Filter>Source\Individual_Project\Animation</Filter>
     </ClCompile>
@@ -62,6 +68,12 @@
       <Filter>Source\Individual_Project\Character</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Individual_Project\Character\IP_CharacterControlData.h">
+      <Filter>Source\Individual_Project\Character</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\Character\IP_CharacterNonPlayer.cpp">
+      <Filter>Source\Individual_Project\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Character\IP_CharacterNonPlayer.h">
       <Filter>Source\Individual_Project\Character</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Individual_Project\Character\IP_CharacterPlayer.cpp">
@@ -84,6 +96,21 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\Individual_Project\Game\IP_GameMode.h">
       <Filter>Source\Individual_Project\Game</Filter>
+    </ClInclude>
+    <Filter Include="Source\Individual_Project\Interface">
+      <UniqueIdentifier>{2F2AF0AB-2D1A-345B-AE14-ADF779DC8F77}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Individual_Project\Interface\IP_AnimationAttackInterface.cpp">
+      <Filter>Source\Individual_Project\Interface</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Interface\IP_AnimationAttackInterface.h">
+      <Filter>Source\Individual_Project\Interface</Filter>
+    </ClInclude>
+    <Filter Include="Source\Individual_Project\Physics">
+      <UniqueIdentifier>{625EB731-7EC2-3570-BEE5-99B61474596A}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Individual_Project\Physics\IP_Collision.h">
+      <Filter>Source\Individual_Project\Physics</Filter>
     </ClInclude>
     <Filter Include="Source\Individual_Project\Player">
       <UniqueIdentifier>{2AD24472-2FF6-3B26-B307-443F4942FEFF}</UniqueIdentifier>
