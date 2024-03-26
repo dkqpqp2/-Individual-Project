@@ -70,6 +70,12 @@
     <ClInclude Include="..\..\Source\Individual_Project\Character\IP_CharacterPlayer.h">
       <Filter>Source\Individual_Project\Character</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\Character\IP_ComboActionData.cpp">
+      <Filter>Source\Individual_Project\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Character\IP_ComboActionData.h">
+      <Filter>Source\Individual_Project\Character</Filter>
+    </ClInclude>
     <Filter Include="Source\Individual_Project\Game">
       <UniqueIdentifier>{C86C97B2-FA96-332B-ACE9-4B19F2DFB1AB}</UniqueIdentifier>
     </Filter>

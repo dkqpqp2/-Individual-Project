@@ -10,9 +10,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeIP_CharacterBase() {}
 // Cross Module References
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	INDIVIDUAL_PROJECT_API UClass* Z_Construct_UClass_AIP_CharacterBase();
 	INDIVIDUAL_PROJECT_API UClass* Z_Construct_UClass_AIP_CharacterBase_NoRegister();
 	INDIVIDUAL_PROJECT_API UClass* Z_Construct_UClass_UIP_CharacterControlData_NoRegister();
+	INDIVIDUAL_PROJECT_API UClass* Z_Construct_UClass_UIP_ComboActionData_NoRegister();
 	INDIVIDUAL_PROJECT_API UEnum* Z_Construct_UEnum_Individual_Project_ECharacterControlType();
 	UPackage* Z_Construct_UPackage__Script_Individual_Project();
 // End Cross Module References
@@ -89,6 +91,14 @@ void EmptyLinkFunctionForGeneratedCodeIP_CharacterBase() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_CharacterControlManager_MetaData[];
 #endif
 		static const UECodeGen_Private::FMapPropertyParams NewProp_CharacterControlManager;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ComboActionMontage_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_ComboActionMontage;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ComboActionData_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_ComboActionData;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -116,11 +126,27 @@ void EmptyLinkFunctionForGeneratedCodeIP_CharacterBase() {}
 	};
 #endif
 	const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_AIP_CharacterBase_Statics::NewProp_CharacterControlManager = { "CharacterControlManager", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AIP_CharacterBase, CharacterControlManager), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AIP_CharacterBase_Statics::NewProp_CharacterControlManager_MetaData), Z_Construct_UClass_AIP_CharacterBase_Statics::NewProp_CharacterControlManager_MetaData) }; // 1376525430
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIP_CharacterBase_Statics::NewProp_ComboActionMontage_MetaData[] = {
+		{ "Category", "Animation" },
+		{ "ModuleRelativePath", "Character/IP_CharacterBase.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AIP_CharacterBase_Statics::NewProp_ComboActionMontage = { "ComboActionMontage", nullptr, (EPropertyFlags)0x0024080000000005, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AIP_CharacterBase, ComboActionMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AIP_CharacterBase_Statics::NewProp_ComboActionMontage_MetaData), Z_Construct_UClass_AIP_CharacterBase_Statics::NewProp_ComboActionMontage_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIP_CharacterBase_Statics::NewProp_ComboActionData_MetaData[] = {
+		{ "Category", "Animation" },
+		{ "ModuleRelativePath", "Character/IP_CharacterBase.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AIP_CharacterBase_Statics::NewProp_ComboActionData = { "ComboActionData", nullptr, (EPropertyFlags)0x0024080000000005, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AIP_CharacterBase, ComboActionData), Z_Construct_UClass_UIP_ComboActionData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AIP_CharacterBase_Statics::NewProp_ComboActionData_MetaData), Z_Construct_UClass_AIP_CharacterBase_Statics::NewProp_ComboActionData_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AIP_CharacterBase_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterBase_Statics::NewProp_CharacterControlManager_ValueProp,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterBase_Statics::NewProp_CharacterControlManager_Key_KeyProp_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterBase_Statics::NewProp_CharacterControlManager_Key_KeyProp,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterBase_Statics::NewProp_CharacterControlManager,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterBase_Statics::NewProp_ComboActionMontage,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterBase_Statics::NewProp_ComboActionData,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AIP_CharacterBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AIP_CharacterBase>::IsAbstract,
@@ -164,9 +190,9 @@ void EmptyLinkFunctionForGeneratedCodeIP_CharacterBase() {}
 		{ ECharacterControlType_StaticEnum, TEXT("ECharacterControlType"), &Z_Registration_Info_UEnum_ECharacterControlType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1376525430U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Character_IP_CharacterBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AIP_CharacterBase, AIP_CharacterBase::StaticClass, TEXT("AIP_CharacterBase"), &Z_Registration_Info_UClass_AIP_CharacterBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AIP_CharacterBase), 1388149189U) },
+		{ Z_Construct_UClass_AIP_CharacterBase, AIP_CharacterBase::StaticClass, TEXT("AIP_CharacterBase"), &Z_Registration_Info_UClass_AIP_CharacterBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AIP_CharacterBase), 458488849U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Character_IP_CharacterBase_h_4049379443(TEXT("/Script/Individual_Project"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Character_IP_CharacterBase_h_3006933513(TEXT("/Script/Individual_Project"),
 		Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Character_IP_CharacterBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Character_IP_CharacterBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Character_IP_CharacterBase_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Character_IP_CharacterBase_h_Statics::EnumInfo));

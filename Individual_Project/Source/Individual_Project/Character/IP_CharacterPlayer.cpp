@@ -49,6 +49,12 @@ AIP_CharacterPlayer::AIP_CharacterPlayer()
 		QuaterMoveAction = InputQuaterMoveActionRef.Object;
 	}
 
+	static ConstructorHelpers::FObjectFinder<UInputAction> InputAttactActionRef(TEXT("/Script/EnhancedInput.InputAction'/Game/ArenaBattle/Input/Actions/IA_Attack.IA_Attack'"));
+	if (nullptr != InputAttactActionRef.Object)
+	{
+		AttackAction = InputAttactActionRef.Object;
+	}
+
 	CurrentCharacterControlType = ECharacterControlType::Quater;
 }
 
@@ -71,6 +77,7 @@ void AIP_CharacterPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInput
 	EnhancedInputComponent->BindAction(ShoulderMoveAction, ETriggerEvent::Triggered, this, &AIP_CharacterPlayer::ShoulderMove);
 	EnhancedInputComponent->BindAction(ShoulderLookAction, ETriggerEvent::Triggered, this, &AIP_CharacterPlayer::ShoulderLook);
 	EnhancedInputComponent->BindAction(QuaterMoveAction, ETriggerEvent::Triggered, this, &AIP_CharacterPlayer::QuaterMove);
+	EnhancedInputComponent->BindAction(AttackAction, ETriggerEvent::Triggered, this, &AIP_CharacterPlayer::Attack);
 }
 
 void AIP_CharacterPlayer::ChangeCharacterControl()
@@ -170,4 +177,9 @@ void AIP_CharacterPlayer::QuaterMove(const FInputActionValue& Value)
 	GetController()->SetControlRotation(FRotationMatrix::MakeFromX(MoveDirection).Rotator());
 	AddMovementInput(MoveDirection, MovementVectorSize);
 
+}
+
+void AIP_CharacterPlayer::Attack(const FInputActionValue& Value)
+{
+	ProcessComboCommand();
 }

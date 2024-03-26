@@ -56,6 +56,10 @@ void EmptyLinkFunctionForGeneratedCodeIP_CharacterPlayer() {}
 #endif
 		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_QuaterMoveAction;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_AttackAction_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_AttackAction;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_JumpAction_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPtrPropertyParams NewProp_JumpAction;
@@ -129,6 +133,14 @@ void EmptyLinkFunctionForGeneratedCodeIP_CharacterPlayer() {}
 #endif
 	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_QuaterMoveAction = { "QuaterMoveAction", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AIP_CharacterPlayer, QuaterMoveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_QuaterMoveAction_MetaData), Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_QuaterMoveAction_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_AttackAction_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "Character/IP_CharacterPlayer.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPtrPropertyParams Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_AttackAction = { "AttackAction", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AIP_CharacterPlayer, AttackAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_AttackAction_MetaData), Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_AttackAction_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_JumpAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
@@ -143,6 +155,7 @@ void EmptyLinkFunctionForGeneratedCodeIP_CharacterPlayer() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_ShoulderMoveAction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_ShoulderLookAction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_QuaterMoveAction,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_AttackAction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AIP_CharacterPlayer_Statics::NewProp_JumpAction,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AIP_CharacterPlayer_Statics::StaticCppClassTypeInfo = {
@@ -183,9 +196,9 @@ void EmptyLinkFunctionForGeneratedCodeIP_CharacterPlayer() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Character_IP_CharacterPlayer_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AIP_CharacterPlayer, AIP_CharacterPlayer::StaticClass, TEXT("AIP_CharacterPlayer"), &Z_Registration_Info_UClass_AIP_CharacterPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AIP_CharacterPlayer), 644631991U) },
+		{ Z_Construct_UClass_AIP_CharacterPlayer, AIP_CharacterPlayer::StaticClass, TEXT("AIP_CharacterPlayer"), &Z_Registration_Info_UClass_AIP_CharacterPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AIP_CharacterPlayer), 3660409511U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Character_IP_CharacterPlayer_h_4239628111(TEXT("/Script/Individual_Project"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Character_IP_CharacterPlayer_h_1825420747(TEXT("/Script/Individual_Project"),
 		Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Character_IP_CharacterPlayer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Character_IP_CharacterPlayer_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
