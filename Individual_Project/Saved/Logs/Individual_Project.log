@@ -1143,3 +1143,59 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.03.26-12.54.27:829][959]LogDirectoryWatcher: Display: A directory notification failed for 'D:/Individual-Project/Individual_Project/Saved/Collections/' because it could not be accessed. Aborting watch request...
 [2024.03.26-12.54.27:830][959]LogDirectoryWatcher: Display: A directory notification failed for 'D:/Individual-Project/Individual_Project/Content/Collections/' because it could not be accessed. Aborting watch request...
 [2024.03.26-12.54.27:830][959]LogDirectoryWatcher: Display: A directory notification failed for 'D:/Individual-Project/Individual_Project/Content/Developers/Jungho/Collections/' because it could not be accessed. Aborting watch request...
+[2024.03.26-12.55.18:181][747]LogAssetEditorSubsystem: Opening Asset editor for Skeleton /Game/InfinityBladeWarriors/Character/CompleteCharacters/SK_Mannequin_Skeleton.SK_Mannequin_Skeleton
+[2024.03.26-12.55.18:207][747]LogSkeletalMesh: Building Skeletal Mesh SK_CharM_Warrior...
+[2024.03.26-12.55.18:209][747]LogSkeletalMesh: Built Skeletal Mesh [0.00s] /Game/InfinityBladeWarriors/Character/CompleteCharacters/SK_CharM_Warrior.SK_CharM_Warrior
+[2024.03.26-12.55.18:211][747]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.26-12.55.18:211][747]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.26-12.55.18:245][747]LogTexture: Display: 텍스처 빌드 중: /Game/InfinityBladeWarriors/Character/CompleteCharacters/Textures_Materials/CharM_Warrior/T_CharM_Warrior_JewelMask.T_CharM_Warrior_JewelMask(TFO_AutoDXT, 2048x2048 x1x1x1)(예상 필요 메모리: 288.062484MB), 인코딩 속도: Fast
+[2024.03.26-12.55.18:250][747]LogTexture: Display: 텍스처 빌드 중: /Game/InfinityBladeWarriors/Character/CompleteCharacters/Textures_Materials/CharM_Warrior/T_CharM_WarriorB_Mask.T_CharM_WarriorB_Mask(TFO_AutoDXT, 2048x2048 x1x1x1)(예상 필요 메모리: 288.062484MB), 인코딩 속도: Fast
+[2024.03.26-12.55.18:319][747]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_2:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2024.03.26-12.55.18:336][747]LogTexture: Display: 텍스처가 준비 되기를 기다리는 중 0/4 (/Game/InfinityBladeWarriors/Character/CompleteCharacters/Textures_Materials/CharM_Warrior/T_CharM_Warrior_N)...
+[2024.03.26-12.55.18:336][747]LogTexture: Display: 텍스처 빌드 중: /Game/InfinityBladeWarriors/Character/CompleteCharacters/Textures_Materials/CharM_Warrior/T_CharM_Warrior_N.T_CharM_Warrior_N(TFO_BC5, 2048x2048 x1x1x1)(예상 필요 메모리: 381.562488MB), 인코딩 속도: Fast
+[2024.03.26-12.55.18:363][747]LogTexture: Display: 텍스처 빌드 중: /Game/InfinityBladeWarriors/Character/CompleteCharacters/Textures_Materials/CharM_Warrior/T_CharM_WarriorB_D.T_CharM_WarriorB_D(TFO_DXT1, 2048x2048 x1x1x1)(예상 필요 메모리: 280.062483MB), 인코딩 속도: Fast
+[2024.03.26-12.55.18:424][747]LogTexture: Display: 텍스처가 준비 되기를 기다리는 중 1/4 (/Game/InfinityBladeWarriors/Character/CompleteCharacters/Textures_Materials/CharM_Warrior/T_CharM_WarriorB_D)...
+[2024.03.26-12.55.18:782][747]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.26-12.55.18:782][747]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.26-12.55.18:844][747]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.26-12.55.18:890][747]LogSlate: Took 0.008056 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2024.03.26-12.55.18:891][747]LogViewport: Scene viewport resized to 769x121, mode Windowed.
+[2024.03.26-12.55.19:376][777]LogShaderCompilers: Display: ================================================
+[2024.03.26-12.55.19:376][777]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.03.26-12.55.19:376][777]LogShaderCompilers: Display: Total job queries 26, among them cache hits 4 (15.38%)
+[2024.03.26-12.55.19:376][777]LogShaderCompilers: Display: Tracking 21 distinct input hashes that result in 16 distinct outputs (76.19%)
+[2024.03.26-12.55.19:376][777]LogShaderCompilers: Display: RAM used: 464.56 KiB of 2.40 GiB budget. Usage: 0.02%
+[2024.03.26-12.55.19:376][777]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.03.26-12.55.19:376][777]LogShaderCompilers: Display: Shaders Compiled: 1
+[2024.03.26-12.55.19:377][777]LogShaderCompilers: Display: Jobs assigned 2, completed 1 (50.00%)
+[2024.03.26-12.55.19:377][777]LogShaderCompilers: Display: Time job spent in pending queue: average 0.04 s, longest 0.04 s
+[2024.03.26-12.55.19:377][777]LogShaderCompilers: Display: Job execution time: average 0.42 s, max 0.42 s
+[2024.03.26-12.55.19:377][777]LogShaderCompilers: Display: Job life time (pending + execution): average 0.47 s, max 0.47
+[2024.03.26-12.55.19:377][777]LogShaderCompilers: Display: Shader code size: average 37.809 KiB, min 37.809 KiB, max 37.809 KiB
+[2024.03.26-12.55.19:377][777]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 0.47 s
+[2024.03.26-12.55.19:377][777]LogShaderCompilers: Display: Jobs were issued in 2 batches (only local compilation was used), average 1.00 jobs/batch
+[2024.03.26-12.55.19:377][777]LogShaderCompilers: Display: Average processing rate: 2.14 jobs/sec
+[2024.03.26-12.55.19:377][777]LogShaderCompilers: Display: Total thread time: 0.192 s
+[2024.03.26-12.55.19:377][777]LogShaderCompilers: Display: Total thread preprocess time: 0.02 s
+[2024.03.26-12.55.19:377][777]LogShaderCompilers: Display: Percentage time preprocessing: 10.32%
+[2024.03.26-12.55.19:377][777]LogShaderCompilers: Display: Effective parallelization: 0.41 (times faster than compiling all shaders on one thread). Compare with number of workers: 8
+[2024.03.26-12.55.19:377][777]LogShaderCompilers: Display: Top 1 most expensive shader types by average time:
+[2024.03.26-12.55.19:377][777]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    1 times, average 0.19 sec, max 0.19 sec, min 0.19 sec)
+[2024.03.26-12.55.19:377][777]LogShaderCompilers: Display: Top 1 shader types by total compile time:
+[2024.03.26-12.55.19:377][777]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 100.00% of total time (compiled    1 times, average 0.19 sec, max 0.19 sec, min 0.19 sec)
+[2024.03.26-12.55.19:377][777]LogShaderCompilers: Display: ================================================
+[2024.03.26-12.55.19:598][788]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.26-12.55.20:430][856]LogViewport: Scene viewport resized to 1141x866, mode Windowed.
+[2024.03.26-12.55.22:537][ 15]LogSlate: Window 'SK_Mannequin_Skeleton' being destroyed
+[2024.03.26-12.55.22:562][ 15]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2024.03.26-12.55.22:562][ 15]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.26-12.55.22:589][ 15]LogWorld: UWorld::CleanupWorld for World_3, bSessionEnded=true, bCleanupResources=true
+[2024.03.26-12.55.22:589][ 15]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.26-12.55.26:052][355]LogAssetEditorSubsystem: Opening Asset editor for Skeleton /Game/InfinityBladeWarriors/Character/CompleteCharacters/SK_Mannequin_Skeleton.SK_Mannequin_Skeleton
+[2024.03.26-12.55.26:053][355]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.26-12.55.26:053][355]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.26-12.55.26:064][355]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_6:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2024.03.26-12.55.26:325][355]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2024.03.26-12.55.26:325][355]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.26-12.55.26:390][355]LogViewport: Scene viewport resized to 1141x866, mode Windowed.
+[2024.03.26-12.55.37:193][141]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
