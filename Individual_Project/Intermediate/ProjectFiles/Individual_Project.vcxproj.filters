@@ -88,6 +88,15 @@
     <ClInclude Include="..\..\Source\Individual_Project\Character\IP_ComboActionData.h">
       <Filter>Source\Individual_Project\Character</Filter>
     </ClInclude>
+    <Filter Include="Source\Individual_Project\CharacterStat">
+      <UniqueIdentifier>{35B7E29F-1778-3D1D-844A-566266C2B3D3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Individual_Project\CharacterStat\IP_CharacterStatComponent.cpp">
+      <Filter>Source\Individual_Project\CharacterStat</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\CharacterStat\IP_CharacterStatComponent.h">
+      <Filter>Source\Individual_Project\CharacterStat</Filter>
+    </ClInclude>
     <Filter Include="Source\Individual_Project\Game">
       <UniqueIdentifier>{C86C97B2-FA96-332B-ACE9-4B19F2DFB1AB}</UniqueIdentifier>
     </Filter>
@@ -104,6 +113,12 @@
       <Filter>Source\Individual_Project\Interface</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Individual_Project\Interface\IP_AnimationAttackInterface.h">
+      <Filter>Source\Individual_Project\Interface</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\Interface\IP_CharacterWidgetInterface.cpp">
+      <Filter>Source\Individual_Project\Interface</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Interface\IP_CharacterWidgetInterface.h">
       <Filter>Source\Individual_Project\Interface</Filter>
     </ClInclude>
     <Filter Include="Source\Individual_Project\Physics">
@@ -129,6 +144,27 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\Individual_Project\Prop\IP_Fountain.h">
       <Filter>Source\Individual_Project\Prop</Filter>
+    </ClInclude>
+    <Filter Include="Source\Individual_Project\UI">
+      <UniqueIdentifier>{41DBC0C7-EEBE-3B41-8082-0FE552A94CA5}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Individual_Project\UI\IP_HpBarWidget.cpp">
+      <Filter>Source\Individual_Project\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\UI\IP_HpBarWidget.h">
+      <Filter>Source\Individual_Project\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\UI\IP_UserWidget.cpp">
+      <Filter>Source\Individual_Project\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\UI\IP_UserWidget.h">
+      <Filter>Source\Individual_Project\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\UI\IP_WidgetComponent.cpp">
+      <Filter>Source\Individual_Project\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\UI\IP_WidgetComponent.h">
+      <Filter>Source\Individual_Project\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

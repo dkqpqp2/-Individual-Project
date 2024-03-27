@@ -1,5 +1,41 @@
 {
 	"RemapUnityFiles": 
 	{
+		"Module.Individual_Project.cpp.obj": [
+			"AnimNotify_AttackHitCheck.gen.cpp.obj",
+			"Individual_Project.init.gen.cpp.obj",
+			"IP_AnimationAttackInterface.gen.cpp.obj",
+			"IP_AnimInstance.gen.cpp.obj",
+			"IP_CharacterBase.gen.cpp.obj",
+			"IP_CharacterControlData.gen.cpp.obj",
+			"IP_CharacterNonPlayer.gen.cpp.obj",
+			"IP_CharacterPlayer.gen.cpp.obj",
+			"IP_CharacterStatComponent.gen.cpp.obj",
+			"IP_CharacterWidgetInterface.gen.cpp.obj",
+			"IP_ComboActionData.gen.cpp.obj",
+			"IP_Fountain.gen.cpp.obj",
+			"IP_GameMode.gen.cpp.obj",
+			"IP_HpBarWidget.gen.cpp.obj",
+			"IP_PlayerController.gen.cpp.obj",
+			"IP_UserWidget.gen.cpp.obj",
+			"IP_WidgetComponent.gen.cpp.obj",
+			"AnimNotify_AttackHitCheck.cpp.obj",
+			"IP_AnimInstance.cpp.obj",
+			"IP_CharacterStatComponent.cpp.obj",
+			"IP_CharacterBase.cpp.obj",
+			"IP_CharacterControlData.cpp.obj",
+			"IP_CharacterNonPlayer.cpp.obj",
+			"IP_CharacterPlayer.cpp.obj",
+			"IP_ComboActionData.cpp.obj",
+			"IP_GameMode.cpp.obj",
+			"Individual_Project.cpp.obj",
+			"IP_AnimationAttackInterface.cpp.obj",
+			"IP_CharacterWidgetInterface.cpp.obj",
+			"IP_PlayerController.cpp.obj",
+			"IP_Fountain.cpp.obj",
+			"IP_HpBarWidget.cpp.obj",
+			"IP_UserWidget.cpp.obj",
+			"IP_WidgetComponent.cpp.obj"
+		]
 	}
 }

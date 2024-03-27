@@ -9,6 +9,9 @@
 #include "IP_ComboActionData.h"
 #include "Physics/IP_Collision.h"
 #include "Engine/DamageEvents.h"
+#include "CharacterStat/IP_CharacterStatComponent.h"
+#include "UI/IP_WidgetComponent.h"
+#include "UI/IP_HpBarWidget.h"
 
 
 // Sets default values
@@ -75,6 +78,32 @@ AIP_CharacterBase::AIP_CharacterBase()
 	{
 		DeadMontage = DeadActionRef.Object;
 	}
+
+
+	Stat = CreateDefaultSubobject<UIP_CharacterStatComponent>(TEXT("Stat"));
+
+	HpBar = CreateDefaultSubobject<UIP_WidgetComponent>(TEXT("Widget"));
+	HpBar->SetupAttachment(GetMesh());
+	HpBar->SetRelativeLocation(FVector(0.0f, 0.0f, 190.f));
+	static ConstructorHelpers::FClassFinder<UUserWidget> HpBarWidgetRef(TEXT("/Game/ArenaBattle/UI/WBP_HpBar.WBP_HpBar_C"));
+	if (HpBarWidgetRef.Class)
+	{
+		HpBar->SetWidgetClass(HpBarWidgetRef.Class);
+		HpBar->SetWidgetSpace(EWidgetSpace::Screen);
+		HpBar->SetDrawSize(FVector2D(150.0f, 15.0f));
+		HpBar->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	}
+
+
+
+
+}
+
+void AIP_CharacterBase::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+
+	Stat->OnHpZero.AddUObject(this, &AIP_CharacterBase::SetDead);
 
 }
 
@@ -193,7 +222,7 @@ float AIP_CharacterBase::TakeDamage(float DamageAmount, FDamageEvent const& Dama
 {
 	Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 
-	SetDead();
+	Stat->ApplyDamage(DamageAmount);
 
 	return DamageAmount;
 }
@@ -203,6 +232,7 @@ void AIP_CharacterBase::SetDead()
 	GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_None);
 	PlayDeadAnimation();
 	SetActorEnableCollision(false);
+	HpBar->SetHiddenInGame(true);
 }
 
 void AIP_CharacterBase::PlayDeadAnimation()
@@ -210,5 +240,16 @@ void AIP_CharacterBase::PlayDeadAnimation()
 	UAnimInstance* AnimInstance = GetMesh()->GetAnimInstance();
 	AnimInstance->StopAllMontages(0.0f);
 	AnimInstance->Montage_Play(DeadMontage, 1.0f);
+}
+
+void AIP_CharacterBase::SetupCharacterWidget(UIP_UserWidget* InUserWidget)
+{
+	UIP_HpBarWidget* HpBarWidget = Cast<UIP_HpBarWidget>(InUserWidget);
+	if (HpBarWidget)
+	{
+		HpBarWidget->SetMaxHp(Stat->GetMaxHp());
+		HpBarWidget->UpdateHpBar(Stat->GetCurrentHp());
+		Stat->OnHpChanged.AddUObject(HpBarWidget, &UIP_HpBarWidget::UpdateHpBar);
+	}
 }
 
