@@ -121,6 +121,27 @@
     <ClInclude Include="..\..\Source\Individual_Project\Interface\IP_CharacterWidgetInterface.h">
       <Filter>Source\Individual_Project\Interface</Filter>
     </ClInclude>
+    <Filter Include="Source\Individual_Project\Item">
+      <UniqueIdentifier>{43C12985-DFC5-3F37-A85A-652D29C81238}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Individual_Project\Item\IP_ItemBox.cpp">
+      <Filter>Source\Individual_Project\Item</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Item\IP_ItemBox.h">
+      <Filter>Source\Individual_Project\Item</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\Item\IP_ItemData.cpp">
+      <Filter>Source\Individual_Project\Item</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Item\IP_ItemData.h">
+      <Filter>Source\Individual_Project\Item</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\Item\IP_WeaponItemData.cpp">
+      <Filter>Source\Individual_Project\Item</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Item\IP_WeaponItemData.h">
+      <Filter>Source\Individual_Project\Item</Filter>
+    </ClInclude>
     <Filter Include="Source\Individual_Project\Physics">
       <UniqueIdentifier>{625EB731-7EC2-3570-BEE5-99B61474596A}</UniqueIdentifier>
     </Filter>
