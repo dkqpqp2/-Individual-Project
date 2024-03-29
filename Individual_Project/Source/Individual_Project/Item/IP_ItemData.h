@@ -23,7 +23,14 @@ class INDIVIDUAL_PROJECT_API UIP_ItemData : public UPrimaryDataAsset
 	GENERATED_BODY()
 
 public:
+	virtual FPrimaryAssetId GetPrimaryAssetId() const override
+	{
+		return FPrimaryAssetId("IP_ItemData", GetFName());
+	}
+
+public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Type)
 	EItemType Type;
 	
+
 };

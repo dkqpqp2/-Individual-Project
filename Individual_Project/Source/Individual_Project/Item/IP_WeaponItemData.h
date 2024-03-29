@@ -13,7 +13,13 @@ UCLASS()
 class INDIVIDUAL_PROJECT_API UIP_WeaponItemData : public UIP_ItemData
 {
 	GENERATED_BODY()
-	
+
+public:
+	virtual FPrimaryAssetId GetPrimaryAssetId() const override
+	{
+		return FPrimaryAssetId("IP_ItemData", GetFName());
+	}
+
 public:
 	UPROPERTY(EditAnywhere, Category = Weapon)
 	TSoftObjectPtr<class USkeletalMesh> WeaponMesh;

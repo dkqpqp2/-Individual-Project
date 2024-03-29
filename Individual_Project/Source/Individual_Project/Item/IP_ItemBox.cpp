@@ -7,6 +7,8 @@
 #include "Particles/ParticleSystemComponent.h"
 #include "Physics/IP_Collision.h"
 #include "Interface/IP_CharacterItemInterface.h"
+#include "Engine/AssetManager.h"
+#include "IP_ItemData.h"
 
 
 // Sets default values
@@ -40,6 +42,27 @@ AIP_ItemBox::AIP_ItemBox()
 	}
 
 
+}
+
+void AIP_ItemBox::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+
+	UAssetManager& Manager = UAssetManager::Get();
+
+	TArray<FPrimaryAssetId> Assets;
+	Manager.GetPrimaryAssetIdList(TEXT("IP_ItemData"), Assets);
+	ensure(0 < Assets.Num());
+
+	int32 RandomIndex = FMath::RandRange(0, Assets.Num() - 1);
+	FSoftObjectPtr AssetPtr(Manager.GetPrimaryAssetPath(Assets[RandomIndex]));
+	if (AssetPtr.IsPending())
+	{
+		AssetPtr.LoadSynchronous();
+	}
+
+	Item = Cast<UIP_ItemData>(AssetPtr.Get());
+	ensure(Item);
 }
 
 void AIP_ItemBox::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepHitResult)

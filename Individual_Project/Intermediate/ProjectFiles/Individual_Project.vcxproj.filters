@@ -106,6 +106,15 @@
     <ClInclude Include="..\..\Source\Individual_Project\Game\IP_GameMode.h">
       <Filter>Source\Individual_Project\Game</Filter>
     </ClInclude>
+    <Filter Include="Source\Individual_Project\Gimmick">
+      <UniqueIdentifier>{DB11B6C4-DBE7-35E6-955C-088D1757ABFF}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Individual_Project\Gimmick\IP_StageGimmick.cpp">
+      <Filter>Source\Individual_Project\Gimmick</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Gimmick\IP_StageGimmick.h">
+      <Filter>Source\Individual_Project\Gimmick</Filter>
+    </ClInclude>
     <Filter Include="Source\Individual_Project\Interface">
       <UniqueIdentifier>{2F2AF0AB-2D1A-345B-AE14-ADF779DC8F77}</UniqueIdentifier>
     </Filter>
