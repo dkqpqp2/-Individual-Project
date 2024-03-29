@@ -6,6 +6,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "Physics/IP_Collision.h"
+#include "Interface/IP_CharacterItemInterface.h"
 
 
 // Sets default values
@@ -43,6 +44,18 @@ AIP_ItemBox::AIP_ItemBox()
 
 void AIP_ItemBox::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepHitResult)
 {
+	if (nullptr == Item)
+	{
+		Destroy();
+		return;
+	}
+
+	IIP_CharacterItemInterface* OverlappingPawn = Cast<IIP_CharacterItemInterface>(OtherActor);
+	if (OverlappingPawn)
+	{
+		OverlappingPawn->TakeItem(Item);
+	}
+
 	Effect->Activate(true);
 	Mesh->SetHiddenInGame(true);
 	SetActorEnableCollision(false);

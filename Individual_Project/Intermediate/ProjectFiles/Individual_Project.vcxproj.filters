@@ -115,6 +115,12 @@
     <ClInclude Include="..\..\Source\Individual_Project\Interface\IP_AnimationAttackInterface.h">
       <Filter>Source\Individual_Project\Interface</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\Interface\IP_CharacterItemInterface.cpp">
+      <Filter>Source\Individual_Project\Interface</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Interface\IP_CharacterItemInterface.h">
+      <Filter>Source\Individual_Project\Interface</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Individual_Project\Interface\IP_CharacterWidgetInterface.cpp">
       <Filter>Source\Individual_Project\Interface</Filter>
     </ClCompile>

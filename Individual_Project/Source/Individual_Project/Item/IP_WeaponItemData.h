@@ -16,7 +16,8 @@ class INDIVIDUAL_PROJECT_API UIP_WeaponItemData : public UIP_ItemData
 	
 public:
 	UPROPERTY(EditAnywhere, Category = Weapon)
-	TObjectPtr<class USkeletalMesh> WeaponMesh;
+	TSoftObjectPtr<class USkeletalMesh> WeaponMesh;
 
 
 };
+ 

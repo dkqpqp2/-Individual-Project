@@ -12,12 +12,14 @@
 #include "CharacterStat/IP_CharacterStatComponent.h"
 #include "UI/IP_WidgetComponent.h"
 #include "UI/IP_HpBarWidget.h"
+#include "Item/IP_WeaponItemData.h"
 
+DEFINE_LOG_CATEGORY(LogIP_Character);
 
 // Sets default values
 AIP_CharacterBase::AIP_CharacterBase()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
@@ -94,9 +96,12 @@ AIP_CharacterBase::AIP_CharacterBase()
 		HpBar->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	}
 
+	TakeItemActions.Add(FTakeItemDelegateWrapper(FOnTakeItemDelegate::CreateUObject(this, &AIP_CharacterBase::EquipWeapon)));
+	TakeItemActions.Add(FTakeItemDelegateWrapper(FOnTakeItemDelegate::CreateUObject(this, &AIP_CharacterBase::DrinkPotion)));
+	TakeItemActions.Add(FTakeItemDelegateWrapper(FOnTakeItemDelegate::CreateUObject(this, &AIP_CharacterBase::ReadScroll)));
 
-
-
+	Weapon = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Weapon"));
+	Weapon->SetupAttachment(GetMesh(), TEXT("hand_rSocket"));
 }
 
 void AIP_CharacterBase::PostInitializeComponents()
@@ -251,5 +256,39 @@ void AIP_CharacterBase::SetupCharacterWidget(UIP_UserWidget* InUserWidget)
 		HpBarWidget->UpdateHpBar(Stat->GetCurrentHp());
 		Stat->OnHpChanged.AddUObject(HpBarWidget, &UIP_HpBarWidget::UpdateHpBar);
 	}
+
+}
+
+void AIP_CharacterBase::TakeItem(UIP_ItemData* InItemData)
+{
+	if (InItemData)
+	{
+		TakeItemActions[(uint8)InItemData->Type].ItemDelegate.ExecuteIfBound(InItemData);
+	}
+	
+}
+
+void AIP_CharacterBase::DrinkPotion(UIP_ItemData* InItemData)
+{
+	UE_LOG(LogIP_Character, Log, TEXT("Drink Potion"));
+}
+
+void AIP_CharacterBase::EquipWeapon(UIP_ItemData* InItemData)
+{
+	UIP_WeaponItemData* WeaponItemData = Cast<UIP_WeaponItemData>(InItemData);
+
+	if (InItemData)
+	{
+		if (WeaponItemData->WeaponMesh.IsPending())
+		{
+			WeaponItemData->WeaponMesh.LoadSynchronous();
+		}
+		Weapon->SetSkeletalMesh(WeaponItemData->WeaponMesh.Get());
+	}
+}
+
+void AIP_CharacterBase::ReadScroll(UIP_ItemData* InItemData)
+{
+	UE_LOG(LogIP_Character, Log, TEXT("Read Scroll"));
 }
 
