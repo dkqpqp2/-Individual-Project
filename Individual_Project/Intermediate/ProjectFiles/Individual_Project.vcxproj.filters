@@ -43,6 +43,15 @@
     <ClInclude Include="..\..\Source\Individual_Project\Individual_Project.h">
       <Filter>Source\Individual_Project</Filter>
     </ClInclude>
+    <Filter Include="Source\Individual_Project\AI">
+      <UniqueIdentifier>{522A7D50-7F8B-39BE-AED4-1D15959AAAD7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Individual_Project\AI\IP_AIController.cpp">
+      <Filter>Source\Individual_Project\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\AI\IP_AIController.h">
+      <Filter>Source\Individual_Project\AI</Filter>
+    </ClInclude>
     <Filter Include="Source\Individual_Project\Animation">
       <UniqueIdentifier>{9BC42ED3-A1C3-3F85-9025-E1B8F46F7D4B}</UniqueIdentifier>
     </Filter>

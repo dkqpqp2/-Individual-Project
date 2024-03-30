@@ -3,10 +3,13 @@
 
 #include "IP_CharacterNonPlayer.h"
 #include "Engine/AssetManager.h"
+#include "AI/IP_AIController.h"
 
 AIP_CharacterNonPlayer::AIP_CharacterNonPlayer()
 {
 	GetMesh()->SetHiddenInGame(true);
+	AIControllerClass = AIP_AIController::StaticClass();
+	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
 }
 
 void AIP_CharacterNonPlayer::PostInitializeComponents()

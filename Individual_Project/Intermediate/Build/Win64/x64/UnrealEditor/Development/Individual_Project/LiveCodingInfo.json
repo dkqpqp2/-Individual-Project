@@ -4,6 +4,7 @@
 		"Module.Individual_Project.cpp.obj": [
 			"AnimNotify_AttackHitCheck.gen.cpp.obj",
 			"Individual_Project.init.gen.cpp.obj",
+			"IP_AIController.gen.cpp.obj",
 			"IP_AnimationAttackInterface.gen.cpp.obj",
 			"IP_AnimInstance.gen.cpp.obj",
 			"IP_CharacterBase.gen.cpp.obj",
@@ -26,6 +27,7 @@
 			"IP_UserWidget.gen.cpp.obj",
 			"IP_WeaponItemData.gen.cpp.obj",
 			"IP_WidgetComponent.gen.cpp.obj",
+			"IP_AIController.cpp.obj",
 			"AnimNotify_AttackHitCheck.cpp.obj",
 			"IP_AnimInstance.cpp.obj",
 			"IP_CharacterStatComponent.cpp.obj",
