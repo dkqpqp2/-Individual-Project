@@ -25,6 +25,9 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultIndividual_Project.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
@@ -105,6 +108,18 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\Individual_Project\Game\IP_GameMode.h">
       <Filter>Source\Individual_Project\Game</Filter>
+    </ClInclude>
+    <Filter Include="Source\Individual_Project\GameData">
+      <UniqueIdentifier>{9CE2784C-E7EE-3AB8-865B-004D1257B8A9}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Individual_Project\GameData\IP_CharacterStat.h">
+      <Filter>Source\Individual_Project\GameData</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\GameData\IP_GameSingleton.cpp">
+      <Filter>Source\Individual_Project\GameData</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\GameData\IP_GameSingleton.h">
+      <Filter>Source\Individual_Project\GameData</Filter>
     </ClInclude>
     <Filter Include="Source\Individual_Project\Gimmick">
       <UniqueIdentifier>{DB11B6C4-DBE7-35E6-955C-088D1757ABFF}</UniqueIdentifier>

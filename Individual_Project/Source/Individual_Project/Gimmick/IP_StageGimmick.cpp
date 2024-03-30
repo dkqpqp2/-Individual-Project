@@ -66,7 +66,7 @@ AIP_StageGimmick::AIP_StageGimmick()
 		RewardBoxLocations.Add(GateSocket, BoxLocation);
 	}
 
-
+	CurrentStageNum = 0;
 }
 
 void AIP_StageGimmick::OnConstruction(const FTransform& Transform)
@@ -102,7 +102,13 @@ void AIP_StageGimmick::OnGateTriggerBeginOverlap(UPrimitiveComponent* Overlapped
 	);
 	if (!bResult)
 	{
-		GetWorld()->SpawnActor<AIP_StageGimmick>(NewLocation, FRotator::ZeroRotator);
+		FTransform NewTrasform(NewLocation);
+		AIP_StageGimmick* NewGimmick = GetWorld()->SpawnActorDeferred<AIP_StageGimmick>(AIP_StageGimmick::StaticClass(), NewTrasform);
+		if (NewGimmick)
+		{
+			NewGimmick->SetStageNum(CurrentStageNum + 1);
+			NewGimmick->FinishSpawning(NewTrasform);
+		}
 	}
 }
 
@@ -183,12 +189,14 @@ void AIP_StageGimmick::OnOpponentDestroyed(AActor* DestroyedActor)
 
 void AIP_StageGimmick::OnOpponentSpawn()
 {
-	const FVector SpawnLocation = GetActorLocation() + FVector::UpVector * 88.0f;
-	AActor* OpponentActor = GetWorld()->SpawnActor(OpponentClass, &SpawnLocation, &FRotator::ZeroRotator);
-	AIP_CharacterNonPlayer* IPOpponentCharacter = Cast<AIP_CharacterNonPlayer>(OpponentActor);
+	const FTransform SpawnTransform(GetActorLocation() + FVector::UpVector * 88.0f);
+	AIP_CharacterNonPlayer* IPOpponentCharacter = GetWorld()->SpawnActorDeferred<AIP_CharacterNonPlayer>(OpponentClass, SpawnTransform);
 	if (IPOpponentCharacter)
-	{
+	{ 
 		IPOpponentCharacter->OnDestroyed.AddDynamic(this, &AIP_StageGimmick::OnOpponentDestroyed);
+		IPOpponentCharacter->SetLevel(CurrentStageNum);
+		IPOpponentCharacter->FinishSpawning(SpawnTransform);
+
 	}
 }
 
@@ -213,14 +221,21 @@ void AIP_StageGimmick::SpawnRewardBoxes()
 {
 	for (const auto& RewardBoxLocation : RewardBoxLocations)
 	{
-		FVector WorldSpawnLocation = GetActorLocation() + RewardBoxLocation.Value + FVector(0.0f, 0.0f, 30.0f);
-		AActor* ItemActor = GetWorld()->SpawnActor(RewardBoxClass, &WorldSpawnLocation, &FRotator::ZeroRotator);
-		AIP_ItemBox* RewardBoxActor = Cast<AIP_ItemBox>(ItemActor);
+		FTransform SpawnTransform(GetActorLocation() + RewardBoxLocation.Value + FVector(0.0f, 0.0f, 30.0f));
+		AIP_ItemBox* RewardBoxActor = GetWorld()->SpawnActorDeferred<AIP_ItemBox>(RewardBoxClass, SpawnTransform);
 		if (RewardBoxActor)
 		{
 			RewardBoxActor->Tags.Add(RewardBoxLocation.Key);
 			RewardBoxActor->GetTrigger()->OnComponentBeginOverlap.AddDynamic(this, &AIP_StageGimmick::OnRewardTriggerBeginOverlap);
 			RewardBoxes.Add(RewardBoxActor);
+		}
+	}
+
+	for (const auto& RewardBox : RewardBoxes)
+	{
+		if (RewardBox.IsValid())
+		{
+			RewardBox.Get()->FinishSpawning(RewardBox.Get()->GetActorTransform());
 		}
 	}
 }

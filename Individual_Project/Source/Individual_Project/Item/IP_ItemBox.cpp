@@ -25,7 +25,7 @@ AIP_ItemBox::AIP_ItemBox()
 
 	Trigger->SetCollisionProfileName(CPROFILE_IPTRIGGER);
 	Trigger->SetBoxExtent(FVector(40.0f, 42.0f, 30.0f));
-	Trigger->OnComponentBeginOverlap.AddDynamic(this, &AIP_ItemBox::OnOverlapBegin);
+	
 
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> BoxMeshRef(TEXT("/Script/Engine.StaticMesh'/Game/ArenaBattle/Environment/Props/SM_Env_Breakables_Box1.SM_Env_Breakables_Box1'"));
 	if (BoxMeshRef.Object)
@@ -63,6 +63,8 @@ void AIP_ItemBox::PostInitializeComponents()
 
 	Item = Cast<UIP_ItemData>(AssetPtr.Get());
 	ensure(Item);
+
+	Trigger->OnComponentBeginOverlap.AddDynamic(this, &AIP_ItemBox::OnOverlapBegin);
 }
 
 void AIP_ItemBox::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepHitResult)

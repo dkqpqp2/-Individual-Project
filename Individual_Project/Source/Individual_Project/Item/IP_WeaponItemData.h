@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Item/IP_ItemData.h"
+#include "GameData/IP_CharacterStat.h"
 #include "IP_WeaponItemData.generated.h"
 
 /**
@@ -23,6 +24,9 @@ public:
 public:
 	UPROPERTY(EditAnywhere, Category = Weapon)
 	TSoftObjectPtr<class USkeletalMesh> WeaponMesh;
+
+	UPROPERTY(EditAnywhere, Category = Stat)
+	FIP_CharacterStat ModifierStat;
 
 
 };

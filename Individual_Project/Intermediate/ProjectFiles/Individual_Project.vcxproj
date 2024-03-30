@@ -114,6 +114,7 @@
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
+    <None Include="..\..\Config\DefaultIndividual_Project.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
     <None Include="..\..\Source\Individual_Project\Individual_Project.Build.cs"/>
     <ClCompile Include="..\..\Source\Individual_Project\Individual_Project.cpp">
@@ -176,6 +177,13 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\Individual_Project\Game\IP_GameMode.h"/>
+    <ClInclude Include="..\..\Source\Individual_Project\GameData\IP_CharacterStat.h"/>
+    <ClCompile Include="..\..\Source\Individual_Project\GameData\IP_GameSingleton.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\GameData\IP_GameSingleton.h"/>
     <ClCompile Include="..\..\Source\Individual_Project\Gimmick\IP_StageGimmick.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>

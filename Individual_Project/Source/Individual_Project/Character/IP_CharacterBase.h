@@ -101,4 +101,8 @@ protected:
 	virtual void EquipWeapon(UIP_ItemData* InItemData);
 	virtual void ReadScroll(UIP_ItemData* InItemData);
 
+public:
+	int32 GetLevel();
+	void SetLevel(int32 InNewLevel);
+
 };
