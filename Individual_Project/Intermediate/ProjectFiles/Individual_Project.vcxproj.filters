@@ -220,6 +220,21 @@
     <ClInclude Include="..\..\Source\Individual_Project\Item\IP_ItemData.h">
       <Filter>Source\Individual_Project\Item</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Individual_Project\Item\IP_Items.h">
+      <Filter>Source\Individual_Project\Item</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\Item\IP_PotionItemData.cpp">
+      <Filter>Source\Individual_Project\Item</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Item\IP_PotionItemData.h">
+      <Filter>Source\Individual_Project\Item</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\Item\IP_ScrollItemData.cpp">
+      <Filter>Source\Individual_Project\Item</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Item\IP_ScrollItemData.h">
+      <Filter>Source\Individual_Project\Item</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Individual_Project\Item\IP_WeaponItemData.cpp">
       <Filter>Source\Individual_Project\Item</Filter>
     </ClCompile>

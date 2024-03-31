@@ -10,7 +10,7 @@ struct FIP_CharacterStat : public FTableRowBase
 	GENERATED_BODY()
 
 public:
-	FIP_CharacterStat() : MaxHp(0.0f), Attack(0.0f), AttackRange(0.0f), AttackSpeed(0.0f), MovementSpeed(0.0f) {}
+	FIP_CharacterStat() : MaxHp(0.0f), Attack(0.0f), AttackRange(0.0f), AttackSpeed(0.0f) {}
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Stat)
 	float MaxHp;

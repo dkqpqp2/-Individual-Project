@@ -27,6 +27,12 @@ void AIP_CharacterNonPlayer::SetDead()
 {
 	Super::SetDead();
 
+	AIP_AIController* IP_AIController = Cast<AIP_AIController>(GetController());
+	if (IP_AIController)
+	{
+		IP_AIController->StopAI();
+	}
+
 	FTimerHandle DeadTimerHandle;
 	GetWorld()->GetTimerManager().SetTimer(DeadTimerHandle, FTimerDelegate::CreateLambda(
 		[&]()

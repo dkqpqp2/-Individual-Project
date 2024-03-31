@@ -14,7 +14,7 @@ UIP_HUDWidget::UIP_HUDWidget(const FObjectInitializer& ObjectInitializer) : Supe
 void UIP_HUDWidget::UpdateStat(const FIP_CharacterStat& BaseStat, const FIP_CharacterStat& ModifierStat)
 {
 	FIP_CharacterStat TotalStat = BaseStat + ModifierStat;
-	HpBar->SetMaxHp(TotalStat.MaxHp);
+	HpBar->UpdateStat(BaseStat, ModifierStat);
 
 	CharacterStat->UpdateStat(BaseStat, ModifierStat);
 }

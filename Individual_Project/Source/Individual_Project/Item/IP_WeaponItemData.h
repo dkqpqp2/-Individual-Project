@@ -16,6 +16,8 @@ class INDIVIDUAL_PROJECT_API UIP_WeaponItemData : public UIP_ItemData
 	GENERATED_BODY()
 
 public:
+	UIP_WeaponItemData();
+
 	virtual FPrimaryAssetId GetPrimaryAssetId() const override
 	{
 		return FPrimaryAssetId("IP_ItemData", GetFName());

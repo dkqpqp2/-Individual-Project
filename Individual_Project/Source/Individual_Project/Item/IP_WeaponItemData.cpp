@@ -3,3 +3,7 @@
 
 #include "IP_WeaponItemData.h"
 
+UIP_WeaponItemData::UIP_WeaponItemData()
+{
+	Type = EItemType::Weapon;
+}

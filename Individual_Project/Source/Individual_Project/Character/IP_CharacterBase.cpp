@@ -12,7 +12,7 @@
 #include "CharacterStat/IP_CharacterStatComponent.h"
 #include "UI/IP_WidgetComponent.h"
 #include "UI/IP_HpBarWidget.h"
-#include "Item/IP_WeaponItemData.h"
+#include "Item/IP_Items.h"
 
 DEFINE_LOG_CATEGORY(LogIP_Character);
 
@@ -109,6 +109,7 @@ void AIP_CharacterBase::PostInitializeComponents()
 	Super::PostInitializeComponents();
 
 	Stat->OnHpZero.AddUObject(this, &AIP_CharacterBase::SetDead);
+	Stat->OnStatChanged.AddUObject(this, &AIP_CharacterBase::ApplyStat);
 
 }
 
@@ -258,9 +259,10 @@ void AIP_CharacterBase::SetupCharacterWidget(UIP_UserWidget* InUserWidget)
 	UIP_HpBarWidget* HpBarWidget = Cast<UIP_HpBarWidget>(InUserWidget);
 	if (HpBarWidget)
 	{
-		HpBarWidget->SetMaxHp(Stat->GetTotalStat().MaxHp);
+		HpBarWidget->UpdateStat(Stat->GetBaseStat(), Stat->GetModifierStat());
 		HpBarWidget->UpdateHpBar(Stat->GetCurrentHp());
 		Stat->OnHpChanged.AddUObject(HpBarWidget, &UIP_HpBarWidget::UpdateHpBar);
+		Stat->OnStatChanged.AddUObject(HpBarWidget, &UIP_HpBarWidget::UpdateStat);
 	}
 
 }
@@ -276,7 +278,11 @@ void AIP_CharacterBase::TakeItem(UIP_ItemData* InItemData)
 
 void AIP_CharacterBase::DrinkPotion(UIP_ItemData* InItemData)
 {
-	UE_LOG(LogIP_Character, Log, TEXT("Drink Potion"));
+	UIP_PotionItemData* PotionItemData = Cast<UIP_PotionItemData>(InItemData);
+	if (PotionItemData)
+	{
+		Stat->HealHp(PotionItemData->HealAmount);
+	}
 }
 
 void AIP_CharacterBase::EquipWeapon(UIP_ItemData* InItemData)
@@ -296,7 +302,11 @@ void AIP_CharacterBase::EquipWeapon(UIP_ItemData* InItemData)
 
 void AIP_CharacterBase::ReadScroll(UIP_ItemData* InItemData)
 {
-	UE_LOG(LogIP_Character, Log, TEXT("Read Scroll"));
+	UIP_ScrollItemData* ScrollItemData = Cast<UIP_ScrollItemData>(InItemData);
+	if (ScrollItemData)
+	{
+		Stat->AddBaseStat(ScrollItemData->BaseStat);
+	}
 }
 
 int32 AIP_CharacterBase::GetLevel()
@@ -308,5 +318,11 @@ int32 AIP_CharacterBase::GetLevel()
 void AIP_CharacterBase::SetLevel(int32 InNewLevel)
 {
 	Stat->SetLevelStat(InNewLevel);
+}
+
+void AIP_CharacterBase::ApplyStat(const FIP_CharacterStat& BaseStat, const FIP_CharacterStat& ModifierStat)
+{
+	float MovementSpeed = (BaseStat + ModifierStat).MovementSpeed;
+	GetCharacterMovement()->MaxWalkSpeed = MovementSpeed;
 }
 

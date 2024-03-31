@@ -7,6 +7,7 @@
 #include "Interface/IP_AnimationAttackInterface.h"
 #include "Interface/IP_CharacterWidgetInterface.h"
 #include "Interface/IP_CharacterItemInterface.h"
+#include "GameData/IP_CharacterStat.h"
 #include "IP_CharacterBase.generated.h"
 
 DECLARE_LOG_CATEGORY_EXTERN(LogIP_Character, Log, All);
@@ -105,5 +106,6 @@ protected:
 public:
 	int32 GetLevel();
 	void SetLevel(int32 InNewLevel);
+	void ApplyStat(const FIP_CharacterStat& BaseStat, const FIP_CharacterStat& ModifierStat);
 
 };
