@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Inflearn_Project",
+			"Path": "..\\Source\\Inflearn_Project.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Inflearn_ProjectEditor",
+			"Path": "..\\Source\\Inflearn_ProjectEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

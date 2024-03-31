@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\individual-project\\inflearn_project\\source\\inflearn_project\\inflearn_project.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\individual-project\\inflearn_project\\intermediate\\build\\win64\\x64\\inflearn_projecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "d:\\individual-project\\inflearn_project\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\inflearn_project\\definitions.inflearn_project.h",
+            "d:\\individual-project\\inflearn_project\\source\\inflearn_project\\inflearn_project.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
