@@ -13,6 +13,21 @@ AIP_PlayerController::AIP_PlayerController()
 	}
 }
 
+void AIP_PlayerController::GameScoreChanged(int32 NewScore)
+{
+	K2_OnScoreChanged(NewScore);
+}
+
+void AIP_PlayerController::GameClear()
+{
+	K2_OnGameClear();
+}
+
+void AIP_PlayerController::GameOver()
+{
+	K2_OnGameOver();
+}
+
 void AIP_PlayerController::BeginPlay()
 {
 	Super::BeginPlay();

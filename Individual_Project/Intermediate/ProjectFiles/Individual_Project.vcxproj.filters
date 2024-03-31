@@ -205,6 +205,12 @@
     <ClInclude Include="..\..\Source\Individual_Project\Interface\IP_CharacterWidgetInterface.h">
       <Filter>Source\Individual_Project\Interface</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\Interface\IP_GameInterface.cpp">
+      <Filter>Source\Individual_Project\Interface</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Interface\IP_GameInterface.h">
+      <Filter>Source\Individual_Project\Interface</Filter>
+    </ClInclude>
     <Filter Include="Source\Individual_Project\Item">
       <UniqueIdentifier>{43C12985-DFC5-3F37-A85A-652D29C81238}</UniqueIdentifier>
     </Filter>

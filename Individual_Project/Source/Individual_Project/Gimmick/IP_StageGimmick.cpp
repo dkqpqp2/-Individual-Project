@@ -7,6 +7,7 @@
 #include "Physics/IP_Collision.h"
 #include "Character/IP_CharacterNonPlayer.h"
 #include "Item/IP_ItemBox.h"
+#include "Interface/IP_GameInterface.h"
 
 // Sets default values
 AIP_StageGimmick::AIP_StageGimmick()
@@ -184,7 +185,18 @@ void AIP_StageGimmick::SetChooseNext()
 
 void AIP_StageGimmick::OnOpponentDestroyed(AActor* DestroyedActor)
 {
+	IIP_GameInterface* IP_GameMode = Cast<IIP_GameInterface>(GetWorld()->GetAuthGameMode());
+	if (IP_GameMode)
+	{
+		IP_GameMode->OnPlayerScoreChanged(CurrentStageNum);
+		if (IP_GameMode->IsGameCleared())
+		{
+			return;
+		}
+	}
 	SetState(EStageState::REWARD);
+
+
 }
 
 void AIP_StageGimmick::OnOpponentSpawn()

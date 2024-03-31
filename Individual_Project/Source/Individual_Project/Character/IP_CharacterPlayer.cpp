@@ -10,6 +10,7 @@
 #include "IP_CharacterControlData.h"
 #include "UI/IP_HUDWidget.h"
 #include "CharacterStat/IP_CharacterStatComponent.h"
+#include "Interface/IP_GameInterface.h"
 
 AIP_CharacterPlayer::AIP_CharacterPlayer()
 {
@@ -81,6 +82,11 @@ void AIP_CharacterPlayer::SetDead()
 	if (PlayerController)
 	{
 		DisableInput(PlayerController);
+		IIP_GameInterface* IP_GameMode = Cast<IIP_GameInterface>(GetWorld()->GetAuthGameMode());
+		if (IP_GameMode)
+		{
+			IP_GameMode->OnPlayerDead();
+		}
 	}
 }
 

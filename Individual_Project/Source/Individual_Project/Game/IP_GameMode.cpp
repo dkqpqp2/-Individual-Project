@@ -19,5 +19,42 @@ AIP_GameMode::AIP_GameMode()
 		PlayerControllerClass = PlayerControllerRef.Class;
 	}
 
-	//PlayerControllerClass = AIP_PlayerController::StaticClass();
+	ClearScore = 3;
+	CurrentScore = 0;
+	bIsCleared = false;
+
+}
+
+void AIP_GameMode::OnPlayerScoreChanged(int32 NewPlayerScore)
+{
+	CurrentScore = NewPlayerScore;
+
+	AIP_PlayerController* IP_PlayerController = Cast<AIP_PlayerController>(GetWorld()->GetFirstPlayerController());
+	if (IP_PlayerController)
+	{
+		IP_PlayerController->GameScoreChanged(CurrentScore);
+	}
+
+	if (CurrentScore >= ClearScore)
+	{
+		bIsCleared = true;
+		if (IP_PlayerController)
+		{
+			IP_PlayerController->GameClear();
+		}
+	}
+}
+
+void AIP_GameMode::OnPlayerDead()
+{
+	AIP_PlayerController* IP_PlayerController = Cast<AIP_PlayerController>(GetWorld()->GetFirstPlayerController());
+	if (IP_PlayerController)
+	{
+		IP_PlayerController->GameOver();
+	}
+}
+
+bool AIP_GameMode::IsGameCleared()
+{
+	return bIsCleared;
 }

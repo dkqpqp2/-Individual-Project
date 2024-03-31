@@ -17,6 +17,17 @@ class INDIVIDUAL_PROJECT_API AIP_PlayerController : public APlayerController
 public:
 	AIP_PlayerController();
 
+	UFUNCTION(BlueprintImplementableEvent, Category = Game, Meta = (DisplayName = "OnScoreChangedCpp"))
+	void K2_OnScoreChanged(int32 NewScore);
+	UFUNCTION(BlueprintImplementableEvent, Category = Game, Meta = (DisplayName = "OnGameClearCpp"))
+	void K2_OnGameClear();
+	UFUNCTION(BlueprintImplementableEvent, Category = Game, Meta = (DisplayName = "OnGameOverCpp"))
+	void K2_OnGameOver();
+
+	void GameScoreChanged(int32 NewScore);
+	void GameClear();
+	void GameOver();
+
 protected:
 	virtual void BeginPlay() override;
 

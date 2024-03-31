@@ -16,8 +16,109 @@ void EmptyLinkFunctionForGeneratedCodeIP_PlayerController() {}
 	INDIVIDUAL_PROJECT_API UClass* Z_Construct_UClass_UIP_HUDWidget_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_Individual_Project();
 // End Cross Module References
+	struct IP_PlayerController_eventK2_OnScoreChanged_Parms
+	{
+		int32 NewScore;
+	};
+	static FName NAME_AIP_PlayerController_K2_OnGameClear = FName(TEXT("K2_OnGameClear"));
+	void AIP_PlayerController::K2_OnGameClear()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_AIP_PlayerController_K2_OnGameClear),NULL);
+	}
+	static FName NAME_AIP_PlayerController_K2_OnGameOver = FName(TEXT("K2_OnGameOver"));
+	void AIP_PlayerController::K2_OnGameOver()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_AIP_PlayerController_K2_OnGameOver),NULL);
+	}
+	static FName NAME_AIP_PlayerController_K2_OnScoreChanged = FName(TEXT("K2_OnScoreChanged"));
+	void AIP_PlayerController::K2_OnScoreChanged(int32 NewScore)
+	{
+		IP_PlayerController_eventK2_OnScoreChanged_Parms Parms;
+		Parms.NewScore=NewScore;
+		ProcessEvent(FindFunctionChecked(NAME_AIP_PlayerController_K2_OnScoreChanged),&Parms);
+	}
 	void AIP_PlayerController::StaticRegisterNativesAIP_PlayerController()
 	{
+	}
+	struct Z_Construct_UFunction_AIP_PlayerController_K2_OnGameClear_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AIP_PlayerController_K2_OnGameClear_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Game" },
+		{ "DisplayName", "OnGameClearCpp" },
+		{ "ModuleRelativePath", "Player/IP_PlayerController.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AIP_PlayerController_K2_OnGameClear_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AIP_PlayerController, nullptr, "K2_OnGameClear", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AIP_PlayerController_K2_OnGameClear_Statics::Function_MetaDataParams), Z_Construct_UFunction_AIP_PlayerController_K2_OnGameClear_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_AIP_PlayerController_K2_OnGameClear()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AIP_PlayerController_K2_OnGameClear_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AIP_PlayerController_K2_OnGameOver_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AIP_PlayerController_K2_OnGameOver_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Game" },
+		{ "DisplayName", "OnGameOverCpp" },
+		{ "ModuleRelativePath", "Player/IP_PlayerController.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AIP_PlayerController_K2_OnGameOver_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AIP_PlayerController, nullptr, "K2_OnGameOver", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AIP_PlayerController_K2_OnGameOver_Statics::Function_MetaDataParams), Z_Construct_UFunction_AIP_PlayerController_K2_OnGameOver_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_AIP_PlayerController_K2_OnGameOver()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AIP_PlayerController_K2_OnGameOver_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AIP_PlayerController_K2_OnScoreChanged_Statics
+	{
+		static const UECodeGen_Private::FIntPropertyParams NewProp_NewScore;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_AIP_PlayerController_K2_OnScoreChanged_Statics::NewProp_NewScore = { "NewScore", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(IP_PlayerController_eventK2_OnScoreChanged_Parms, NewScore), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AIP_PlayerController_K2_OnScoreChanged_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AIP_PlayerController_K2_OnScoreChanged_Statics::NewProp_NewScore,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AIP_PlayerController_K2_OnScoreChanged_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Game" },
+		{ "DisplayName", "OnScoreChangedCpp" },
+		{ "ModuleRelativePath", "Player/IP_PlayerController.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AIP_PlayerController_K2_OnScoreChanged_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AIP_PlayerController, nullptr, "K2_OnScoreChanged", nullptr, nullptr, Z_Construct_UFunction_AIP_PlayerController_K2_OnScoreChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AIP_PlayerController_K2_OnScoreChanged_Statics::PropPointers), sizeof(IP_PlayerController_eventK2_OnScoreChanged_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AIP_PlayerController_K2_OnScoreChanged_Statics::Function_MetaDataParams), Z_Construct_UFunction_AIP_PlayerController_K2_OnScoreChanged_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AIP_PlayerController_K2_OnScoreChanged_Statics::PropPointers) < 2048);
+	static_assert(sizeof(IP_PlayerController_eventK2_OnScoreChanged_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_AIP_PlayerController_K2_OnScoreChanged()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AIP_PlayerController_K2_OnScoreChanged_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AIP_PlayerController);
 	UClass* Z_Construct_UClass_AIP_PlayerController_NoRegister()
@@ -27,6 +128,7 @@ void EmptyLinkFunctionForGeneratedCodeIP_PlayerController() {}
 	struct Z_Construct_UClass_AIP_PlayerController_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -47,6 +149,12 @@ void EmptyLinkFunctionForGeneratedCodeIP_PlayerController() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Individual_Project,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AIP_PlayerController_Statics::DependentSingletons) < 16);
+	const FClassFunctionLinkInfo Z_Construct_UClass_AIP_PlayerController_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AIP_PlayerController_K2_OnGameClear, "K2_OnGameClear" }, // 1270409609
+		{ &Z_Construct_UFunction_AIP_PlayerController_K2_OnGameOver, "K2_OnGameOver" }, // 1209815725
+		{ &Z_Construct_UFunction_AIP_PlayerController_K2_OnScoreChanged, "K2_OnScoreChanged" }, // 1401533554
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AIP_PlayerController_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AIP_PlayerController_Statics::Class_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
@@ -84,11 +192,11 @@ void EmptyLinkFunctionForGeneratedCodeIP_PlayerController() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AIP_PlayerController_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_AIP_PlayerController_Statics::PropPointers),
 		0,
 		0x009002A4u,
@@ -114,9 +222,9 @@ void EmptyLinkFunctionForGeneratedCodeIP_PlayerController() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Player_IP_PlayerController_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AIP_PlayerController, AIP_PlayerController::StaticClass, TEXT("AIP_PlayerController"), &Z_Registration_Info_UClass_AIP_PlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AIP_PlayerController), 4094708837U) },
+		{ Z_Construct_UClass_AIP_PlayerController, AIP_PlayerController::StaticClass, TEXT("AIP_PlayerController"), &Z_Registration_Info_UClass_AIP_PlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AIP_PlayerController), 2781917252U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Player_IP_PlayerController_h_4245628523(TEXT("/Script/Individual_Project"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Player_IP_PlayerController_h_3056468845(TEXT("/Script/Individual_Project"),
 		Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Player_IP_PlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Individual_Project_Source_Individual_Project_Player_IP_PlayerController_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
