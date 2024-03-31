@@ -46,6 +46,39 @@
     <Filter Include="Source\Individual_Project\AI">
       <UniqueIdentifier>{522A7D50-7F8B-39BE-AED4-1D15959AAAD7}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Individual_Project\AI\BTDecorator_AttackInRange.cpp">
+      <Filter>Source\Individual_Project\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\AI\BTDecorator_AttackInRange.h">
+      <Filter>Source\Individual_Project\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\AI\BTService_Detect.cpp">
+      <Filter>Source\Individual_Project\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\AI\BTService_Detect.h">
+      <Filter>Source\Individual_Project\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\AI\BTTask_Attack.cpp">
+      <Filter>Source\Individual_Project\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\AI\BTTask_Attack.h">
+      <Filter>Source\Individual_Project\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\AI\BTTask_FindPatrolPos.cpp">
+      <Filter>Source\Individual_Project\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\AI\BTTask_FindPatrolPos.h">
+      <Filter>Source\Individual_Project\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\AI\BTTask_TurnToTarget.cpp">
+      <Filter>Source\Individual_Project\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\AI\BTTask_TurnToTarget.h">
+      <Filter>Source\Individual_Project\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Individual_Project\AI\IP_AI.h">
+      <Filter>Source\Individual_Project\AI</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Individual_Project\AI\IP_AIController.cpp">
       <Filter>Source\Individual_Project\AI</Filter>
     </ClCompile>
@@ -142,6 +175,12 @@
     <Filter Include="Source\Individual_Project\Interface">
       <UniqueIdentifier>{2F2AF0AB-2D1A-345B-AE14-ADF779DC8F77}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Individual_Project\Interface\IP_AICharacterInterface.cpp">
+      <Filter>Source\Individual_Project\Interface</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Interface\IP_AICharacterInterface.h">
+      <Filter>Source\Individual_Project\Interface</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Individual_Project\Interface\IP_AnimationAttackInterface.cpp">
       <Filter>Source\Individual_Project\Interface</Filter>
     </ClCompile>

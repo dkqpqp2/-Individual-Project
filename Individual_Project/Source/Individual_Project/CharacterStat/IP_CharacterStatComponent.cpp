@@ -8,6 +8,7 @@
 UIP_CharacterStatComponent::UIP_CharacterStatComponent()
 {
 	CurrentLevel = 1;
+	AttackRadius = 50.0f;
 }
 
 

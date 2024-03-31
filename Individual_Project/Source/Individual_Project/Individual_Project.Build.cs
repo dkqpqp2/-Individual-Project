@@ -15,6 +15,9 @@ public class Individual_Project : ModuleRules
 			, "InputCore"
 			, "UMG"
 			, "EnhancedInput"
+			, "NavigationSystem"
+			, "AIModule"
+			, "GameplayTasks"
 		
 		});
 

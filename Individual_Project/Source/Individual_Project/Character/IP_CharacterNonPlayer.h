@@ -5,13 +5,14 @@
 #include "CoreMinimal.h"
 #include "Character/IP_CharacterBase.h"
 #include "Engine/StreamableManager.h"
+#include "Interface/IP_AICharacterInterface.h"
 #include "IP_CharacterNonPlayer.generated.h"
 
 /**
  * 
  */
 UCLASS(config = Individual_Project)
-class INDIVIDUAL_PROJECT_API AIP_CharacterNonPlayer : public AIP_CharacterBase
+class INDIVIDUAL_PROJECT_API AIP_CharacterNonPlayer : public AIP_CharacterBase, public IIP_AICharacterInterface
 {
 	GENERATED_BODY()
 
@@ -19,7 +20,7 @@ public:
 	AIP_CharacterNonPlayer();
 
 protected:
-	virtual void PostInitializeComponents()override;
+	virtual void PostInitializeComponents() override;
 
 protected:
 	void SetDead() override;
@@ -29,4 +30,18 @@ protected:
 	TArray<FSoftObjectPath> NPCMeshes;
 
 	TSharedPtr<FStreamableHandle> NPCMeshHandle;
+
+protected:
+	virtual float GetAIPatrolRadius() override;
+	virtual float GetAIDetectRange() override;
+	virtual float GetAIAttackRange() override;
+	virtual float GetAITurnSpeed() override;
+
+
+	virtual void SetAIAttackDelegate(const FAICharacterAttackFinished& InOnAttackFinished) override;
+	virtual void AttackByAI() override;
+
+	FAICharacterAttackFinished OnAttackFinished;
+
+	virtual void NotifyComboActionEnd() override;
 };
