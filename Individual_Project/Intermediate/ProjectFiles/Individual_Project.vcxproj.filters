@@ -187,6 +187,12 @@
     <ClInclude Include="..\..\Source\Individual_Project\Interface\IP_AnimationAttackInterface.h">
       <Filter>Source\Individual_Project\Interface</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\Interface\IP_CharacterHUDInterface.cpp">
+      <Filter>Source\Individual_Project\Interface</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\Interface\IP_CharacterHUDInterface.h">
+      <Filter>Source\Individual_Project\Interface</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Individual_Project\Interface\IP_CharacterItemInterface.cpp">
       <Filter>Source\Individual_Project\Interface</Filter>
     </ClCompile>
@@ -247,10 +253,22 @@
     <Filter Include="Source\Individual_Project\UI">
       <UniqueIdentifier>{41DBC0C7-EEBE-3B41-8082-0FE552A94CA5}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Individual_Project\UI\IP_CharacterStatWidget.cpp">
+      <Filter>Source\Individual_Project\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\UI\IP_CharacterStatWidget.h">
+      <Filter>Source\Individual_Project\UI</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Individual_Project\UI\IP_HpBarWidget.cpp">
       <Filter>Source\Individual_Project\UI</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Individual_Project\UI\IP_HpBarWidget.h">
+      <Filter>Source\Individual_Project\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Individual_Project\UI\IP_HUDWidget.cpp">
+      <Filter>Source\Individual_Project\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Individual_Project\UI\IP_HUDWidget.h">
       <Filter>Source\Individual_Project\UI</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Individual_Project\UI\IP_UserWidget.cpp">

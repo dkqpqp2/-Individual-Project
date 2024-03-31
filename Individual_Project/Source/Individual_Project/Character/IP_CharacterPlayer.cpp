@@ -8,6 +8,8 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "IP_CharacterControlData.h"
+#include "UI/IP_HUDWidget.h"
+#include "CharacterStat/IP_CharacterStatComponent.h"
 
 AIP_CharacterPlayer::AIP_CharacterPlayer()
 {
@@ -179,7 +181,19 @@ void AIP_CharacterPlayer::QuaterMove(const FInputActionValue& Value)
 
 }
 
-void AIP_CharacterPlayer::Attack(const FInputActionValue& Value)
+void AIP_CharacterPlayer::Attack()
 {
 	ProcessComboCommand();
+}
+
+void AIP_CharacterPlayer::SetupHUDWidget(UIP_HUDWidget* InHUDWidget)
+{
+	if (InHUDWidget)
+	{
+		InHUDWidget->UpdateStat(Stat->GetBaseStat(), Stat->GetModifierStat());
+		InHUDWidget->UpdateHpBar(Stat->GetCurrentHp());
+
+		Stat->OnStatChanged.AddUObject(InHUDWidget, &UIP_HUDWidget::UpdateStat);
+		Stat->OnHpChanged.AddUObject(InHUDWidget, &UIP_HUDWidget::UpdateHpBar);
+	}
 }

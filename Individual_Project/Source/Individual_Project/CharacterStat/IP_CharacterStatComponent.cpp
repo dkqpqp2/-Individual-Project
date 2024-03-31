@@ -9,14 +9,13 @@ UIP_CharacterStatComponent::UIP_CharacterStatComponent()
 {
 	CurrentLevel = 1;
 	AttackRadius = 50.0f;
+
+	bWantsInitializeComponent = true;
 }
 
-
-// Called when the game starts
-void UIP_CharacterStatComponent::BeginPlay()
+void UIP_CharacterStatComponent::InitializeComponent()
 {
-	Super::BeginPlay();
-
+	Super::InitializeComponent();
 	SetLevelStat(CurrentLevel);
 	SetHp(BaseStat.MaxHp);
 
@@ -25,7 +24,7 @@ void UIP_CharacterStatComponent::BeginPlay()
 void UIP_CharacterStatComponent::SetLevelStat(int32 InNewLevel)
 {
 	CurrentLevel = FMath::Clamp(InNewLevel, 1, UIP_GameSingleton::Get().CharacterMaxLevel);
-	BaseStat = UIP_GameSingleton::Get().GetCharacterStat(CurrentLevel);
+	SetBaseStat(UIP_GameSingleton::Get().GetCharacterStat(CurrentLevel));
 	check(BaseStat.MaxHp > 0.0f);
 }
 

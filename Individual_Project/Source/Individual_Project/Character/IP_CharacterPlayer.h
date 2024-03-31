@@ -5,13 +5,14 @@
 #include "CoreMinimal.h"
 #include "Character/IP_CharacterBase.h"
 #include "InputActionValue.h"
+#include "Interface/IP_CharacterHUDInterface.h"
 #include "IP_CharacterPlayer.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class INDIVIDUAL_PROJECT_API AIP_CharacterPlayer : public AIP_CharacterBase
+class INDIVIDUAL_PROJECT_API AIP_CharacterPlayer : public AIP_CharacterBase, public IIP_CharacterHUDInterface
 {
 	GENERATED_BODY()
 
@@ -56,9 +57,10 @@ protected:
 	void ShoulderMove(const FInputActionValue& Value);
 	void ShoulderLook(const FInputActionValue& Value);
 	void QuaterMove(const FInputActionValue& Value);
-	void Attack(const FInputActionValue& Value);
+	void Attack();
 
 	ECharacterControlType CurrentCharacterControlType;
 
-
+protected:
+	virtual void SetupHUDWidget(class UIP_HUDWidget* InHUDWidget) override;
 };

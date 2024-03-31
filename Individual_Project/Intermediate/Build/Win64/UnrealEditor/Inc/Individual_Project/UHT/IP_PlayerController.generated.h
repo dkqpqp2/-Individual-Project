@@ -29,8 +29,6 @@ public: \
 
 
 #define FID_Individual_Project_Source_Individual_Project_Player_IP_PlayerController_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AIP_PlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AIP_PlayerController(AIP_PlayerController&&); \
@@ -38,7 +36,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AIP_PlayerController); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AIP_PlayerController); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AIP_PlayerController) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AIP_PlayerController) \
 	NO_API virtual ~AIP_PlayerController();
 
 
