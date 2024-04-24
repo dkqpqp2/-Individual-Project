@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\testserver\\testserverproject\\source\\testserverproject\\testserverproject.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\testserver\\testserverproject\\intermediate\\build\\win64\\x64\\testserverprojecteditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "d:\\testserver\\testserverproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\testserverproject\\definitions.testserverproject.h",
+            "d:\\testserver\\testserverproject\\source\\testserverproject\\testserverproject.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
