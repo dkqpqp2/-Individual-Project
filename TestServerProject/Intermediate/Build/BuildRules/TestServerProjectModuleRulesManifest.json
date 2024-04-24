@@ -1,9 +1,0 @@
-{
-	"SourceFiles": [
-		"D:\\TestServer\\TestServerProject\\Source\\TestServerProject\\TestServerProject.Build.cs",
-		"D:\\TestServer\\TestServerProject\\Source\\TestServerProject.Target.cs",
-		"D:\\TestServer\\TestServerProject\\Source\\TestServerProjectEditor.Target.cs",
-		"D:\\TestServer\\TestServerProject\\Source\\TestServerProjectServer.Target.cs"
-	],
-	"EngineVersion": "5.3.2"
-}
