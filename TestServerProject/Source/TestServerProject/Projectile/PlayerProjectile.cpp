@@ -14,11 +14,13 @@ APlayerProjectile::APlayerProjectile()
 
 	Trigger = CreateDefaultSubobject<USphereComponent>(TEXT("Trigger"));
 	Niagara = CreateDefaultSubobject<UNiagaraComponent>(TEXT("Niagara"));
+	ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile"));
 
 	RootComponent = Trigger;
 	Niagara->SetupAttachment(Trigger);
 
 	//ProjectileMovement->InitialSpeed = 1000.0f;
+	//ProjectileMovement->MaxSpeed = 5000.0f;
 
 }
 

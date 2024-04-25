@@ -12,7 +12,6 @@ public class TestServerProject : ModuleRules
 			"CoreUObject",
 			"Engine",
 			"InputCore",
-			"UMG",
 			"EnhancedInput",
 			"Networking",
             "Sockets",
